@@ -46,18 +46,15 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setSongs, setCurr
     }
   };
 
-  // -1 or 1 ('back' or 'forward')
+  // 0 or 1 ('back' or 'forward')
   const changeTrackHandler = (direction) => {
     let currentSongIndex = songs.findIndex((song) => song.id === currentSong.id);
     let nextSongIndex = (currentSongIndex + 1) % songs.length;
     let previousSongIndex = (currentSongIndex + songs.length - 1) % songs.length;
-    console.log(0 === false);
 
     if (direction) {
-      console.log("1321321");
       setCurrentSong(songs[nextSongIndex]);
     } else {
-      console.log("ehhloefwef");
       setCurrentSong(songs[previousSongIndex]);
     }
 
@@ -85,7 +82,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setSongs, setCurr
       </div>
       <div className="play-control">
         <FontAwesomeIcon
-          onClick={() => changeTrackHandler(-1)}
+          onClick={() => changeTrackHandler(0)}
           icon={faAngleLeft}
           size="2x"
           className="skip-back"

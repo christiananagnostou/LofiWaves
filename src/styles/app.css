@@ -182,7 +182,9 @@ nav button {
   outline: none;
   cursor: pointer;
   border: 2px solid #414141;
-  padding: 0.5rem;
+  color: #414141;
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
   -webkit-transition: all 0.25 ease;
   transition: all 0.25 ease;
 }
@@ -190,6 +192,10 @@ nav button {
 nav button:hover {
   background: #414141;
   color: white;
+}
+
+.music-icon {
+  margin-right: 8px;
 }
 
 * {
