@@ -33,12 +33,12 @@ function chillHop() {
       active: false,
     },
     {
-      name: "Nightfall",
+      name: "Creswick",
       cover:
-        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
-      artist: "Aiguille",
-      audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
-      color: ["#EF8EA9", "#ab417f"],
+        "https://chillhop.com/wp-content/uploads/2020/10/23fdd99adc3e16abcb67b004ea3e748ebf433a49-1024x1024.jpg",
+      artist: "Aviino",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10454",
+      color: ["#CB77BD", "#5F9EDF"],
       id: uuidv4(),
       active: false,
     },
@@ -62,7 +62,36 @@ function chillHop() {
       id: uuidv4(),
       active: false,
     },
-    //ADD MORE HERE
+    {
+      name: "Witch Hat",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/09/c209a7df7b9bc133dfff73ce86ebc3c57c2b73dd-1024x1024.jpg",
+      artist: "Aviino",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10017",
+      color: ["#262a52", "#3e98b6"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Magenta Forever",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/10/23fdd99adc3e16abcb67b004ea3e748ebf433a49-1024x1024.jpg",
+      artist: "Aviino",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=10458",
+      color: ["#CB77BD", "#5F9EDF"],
+      id: uuidv4(),
+      active: false,
+    },
+    {
+      name: "Nightfall",
+      cover:
+        "https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg",
+      artist: "Aiguille",
+      audio: "https://mp3.chillhop.com/serve.php/?mp3=9148",
+      color: ["#EF8EA9", "#ab417f"],
+      id: uuidv4(),
+      active: false,
+    },
   ];
 }
 

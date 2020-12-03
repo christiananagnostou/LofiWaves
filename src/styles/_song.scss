@@ -6,6 +6,7 @@
   align-items: center;
   img {
     width: 20%;
+    min-width: 300px;
     border-radius: 50%;
   }
   h2 {
@@ -13,5 +14,13 @@
   }
   h3 {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song-container{
+    img{
+      width: 55%;
+    }
   }
 }

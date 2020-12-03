@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faPause, faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setSongs, setCurrentSong }) => {
+const Player = ({ currentSong, setCurrentSong, isPlaying, setIsPlaying, songs, setSongs }) => {
   //State
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
@@ -21,10 +21,11 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setSongs, setCurr
   const timeUpdateHandler = (e) => {
     const current = e.target.currentTime;
     const duration = e.target.duration;
-    setSongInfo({ ...songInfo, currentTime: current, duration: duration });
-    if (current === duration) {
-      changeTrackHandler(1);
-    }
+    setSongInfo({
+      ...songInfo,
+      currentTime: current,
+      duration: duration,
+    });
   };
 
   const formatTime = (time) => {
@@ -71,14 +72,26 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setSongs, setCurr
     <div className="player">
       <div className="time-control">
         <p>{formatTime(songInfo.currentTime)}</p>
-        <input
-          type="range"
-          min={0}
-          max={songInfo.duration || 0}
-          value={songInfo.currentTime}
-          onChange={dragHandler}
-        />
-        <p>{formatTime(songInfo.duration)}</p>
+        <div className="track">
+          <input
+            type="range"
+            min={0}
+            max={songInfo.duration || 0}
+            value={songInfo.currentTime}
+            onChange={dragHandler}
+            style={{
+              background: `linear-gradient(to right, ${currentSong.color[0]}, ${currentSong.color[1]})`,
+            }}
+          />
+          <div
+            className="animate-track"
+            style={{
+              transform: `translateX(${(songInfo.currentTime / songInfo.duration) * 100}%)`,
+            }}
+          ></div>
+        </div>
+
+        <p>{songInfo.duration ? formatTime(songInfo.duration) : "0:00"}</p>
       </div>
       <div className="play-control">
         <FontAwesomeIcon
@@ -104,6 +117,7 @@ const Player = ({ currentSong, isPlaying, setIsPlaying, songs, setSongs, setCurr
           onLoadedData={autoPlayHandler}
           onLoadedMetadata={timeUpdateHandler}
           onTimeUpdate={timeUpdateHandler}
+          onEnded={() => changeTrackHandler(1)}
           src={currentSong.audio}
         ></audio>
       </div>

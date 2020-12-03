@@ -20,15 +20,58 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .time-control input {
   width: 100%;
-  padding: 1rem 0;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.time-control input:focus {
+  outline: none;
+}
+
+.time-control input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.time-control input::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
 }
 
 .time-control p {
   padding: 1rem;
+}
+
+.track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.animate-track {
+  background: lightgray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  pointer-events: none;
 }
 
 .play-control {
@@ -47,6 +90,15 @@
 
 .play-control svg {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control {
+    width: 90%;
+  }
+  .play-control {
+    width: 60%;
+  }
 }
 
 .song-container {
@@ -68,6 +120,7 @@
 
 .song-container img {
   width: 20%;
+  min-width: 300px;
   border-radius: 50%;
 }
 
@@ -77,6 +130,12 @@
 
 .song-container h3 {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .song-container img {
+    width: 55%;
+  }
 }
 
 .library {
@@ -109,6 +168,8 @@
           align-items: center;
   padding: 1rem 2rem;
   cursor: pointer;
+  -webkit-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 
 .library-song img {
@@ -165,6 +226,12 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
+
 nav {
   min-height: 10vh;
   display: -webkit-box;
@@ -178,7 +245,7 @@ nav {
 }
 
 nav button {
-  background: transparent;
+  background: white;
   outline: none;
   cursor: pointer;
   border: 2px solid #414141;
@@ -196,6 +263,12 @@ nav button:hover {
 
 .music-icon {
   margin-right: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  nav button {
+    z-index: 10;
+  }
 }
 
 * {
@@ -219,5 +292,14 @@ h3,
 h4 {
   font-weight: 400;
   color: #646464;
+}
+
+.App {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.library-active {
+  margin-left: 30%;
 }
 /*# sourceMappingURL=app.css.map */

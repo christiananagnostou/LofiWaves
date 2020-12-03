@@ -4,7 +4,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   button {
-    background: transparent;
+    background: white;
     outline: none;
     cursor: pointer;
     border: 2px solid rgb(65, 65, 65);
@@ -22,3 +22,12 @@ nav {
 .music-icon {
   margin-right: 8px;
 }
+
+@media screen and (max-width: 768px) {
+  nav{
+    button{
+      z-index: 10;
+    }
+  }
+}
+
