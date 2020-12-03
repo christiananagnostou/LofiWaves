@@ -9,15 +9,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(242, 242, 242);
+}
+
 h1,
 h2,
 h3 {
   color: rgb(50, 50, 50);
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 h3,
 h4 {
   font-weight: 400;
@@ -29,5 +31,5 @@ h4 {
 }
 
 .library-active {
-  margin-left: 30%;
+  padding-left: 30%;
 }

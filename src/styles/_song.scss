@@ -6,7 +6,7 @@
   align-items: center;
   img {
     width: 20%;
-    min-width: 300px;
+    min-width: 250px;
     border-radius: 50%;
   }
   h2 {
@@ -20,7 +20,7 @@
 @media screen and (max-width: 768px) {
   .song-container{
     img{
-      width: 55%;
+      width: 45%;
     }
   }
 }

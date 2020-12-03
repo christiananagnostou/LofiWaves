@@ -120,7 +120,7 @@
 
 .song-container img {
   width: 20%;
-  min-width: 300px;
+  min-width: 250px;
   border-radius: 50%;
 }
 
@@ -134,7 +134,7 @@
 
 @media screen and (max-width: 768px) {
   .song-container img {
-    width: 55%;
+    width: 45%;
   }
 }
 
@@ -278,14 +278,15 @@ nav button:hover {
           box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f2f2;
+}
+
 h1,
 h2,
 h3 {
   color: #323232;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 h3,
@@ -300,6 +301,6 @@ h4 {
 }
 
 .library-active {
-  margin-left: 30%;
+  padding-left: 30%;
 }
 /*# sourceMappingURL=app.css.map */
