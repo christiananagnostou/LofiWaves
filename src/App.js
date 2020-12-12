@@ -20,11 +20,10 @@ function App() {
     if (isPlaying) {
       document.title = `${currentSong.name} - ${currentSong.artist}`;
     }
-    console.log('useEffotocefe')
-  },[currentSong, isPlaying]);
+  }, [currentSong, isPlaying]);
 
   return (
-    <div className={`App ${libraryStatus && 'library-active'}`}>
+    <div className={`App ${libraryStatus && "library-active"}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player

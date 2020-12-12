@@ -6,7 +6,7 @@
   height: 100%;
   background-color: white;
   box-shadow: 2px 2px 50px rgb(201, 201, 201);
-  overflow: scroll;
+  overflow-y: scroll;
   transform: translateX(-100%);
   transition: all 0.5s ease-in-out;
   opacity: 0;
@@ -45,7 +45,6 @@
 }
 *::-webkit-scrollbar {
   width: 5px;
-  height: 100%;
 }
 *::-webkit-scrollbar-track {
   background: transparent;
@@ -69,8 +68,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .library{
+  .library {
     width: 100%;
   }
 }
-
